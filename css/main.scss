@@ -1,0 +1,9 @@
+.main{
+    width: 85%;
+} 
+
+@media( max-width: 414px){
+    .main{
+        width: 100%;
+    }
+}

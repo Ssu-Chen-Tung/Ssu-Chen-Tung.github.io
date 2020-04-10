@@ -1,0 +1,60 @@
+.footer{
+        width: 100%;
+        background-color: $logo_orange;
+        // background: linear-gradient(to bottom,$logo_orange 60%,#E64A12);
+        background: $logo_orange;
+        padding: 50px 0 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+        ul.icon{
+            display: flex;
+            justify-content: center;
+            li{
+                margin-left: 10px;
+            }
+        }
+        ul.menu{
+            position: relative;
+            margin-right: 5%;
+            margin-left: 5%;
+            h4{ 
+                color: $white; 
+                border-bottom: 1px solid $white;
+                margin-bottom: 10px;
+                text-align: center;
+                font-size: 16px;
+            }
+            li{
+                vertical-align: top;
+                display: inline-block;
+                padding: 10px;
+                color: $white; 
+                font-size: 16px;
+                i{
+                    margin-right: 3px;
+                }
+            }
+        }
+        .copyright{
+            width: 100%;
+            margin-top: 50px;
+            text-align: center;
+            color: $white;
+        }
+    }
+
+@media ( max-width: 768px){
+    .footer{
+        ul.menu{
+            display: none;
+        }
+    }
+}
+
+@media ( max-width: 414px){
+    .footer{
+        margin-top: 30px;
+    }
+}

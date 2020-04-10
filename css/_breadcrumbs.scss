@@ -1,0 +1,36 @@
+.breadcrumbs{
+    margin-left: 1%;
+    padding: 10px;
+    ul{
+        display: flex;
+        span{
+            color: $text_black;
+            font-size: 12px;
+            line-height: 2.8;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        li{
+            :hover{
+                color: $logo_red;
+            }
+            a{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+@media( max-width:414px){
+    .breadcrumbs{
+        ul{
+            li{
+                a{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    
+}

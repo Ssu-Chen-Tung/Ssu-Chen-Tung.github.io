@@ -1,0 +1,315 @@
+.header {
+  position: relative;
+  >img{
+    position: absolute;
+    width: 29%;
+    top: 0;
+    left: -70px;
+    // 讓裝飾圖片可以蓋住banner
+    z-index: 2;
+  }
+  .topbar {
+    background-color: $white;
+    .hamburger{
+      position: absolute;
+      top: 15px;
+      display: none;
+    }
+    ul {
+      position: absolute;
+      right: 0;
+      li {
+        display: inline-block;
+        padding: 10px;
+        :hover {
+          color: $logo_red;
+        }
+        a {
+          color: $text_black;
+          font-size: 12px;
+        }
+      }
+    }
+    .logo {
+      padding: 10px;
+      a {
+        width: 152px;
+        height: 63px;
+        display: block;
+        background-image: url("../images/logo_small.svg");
+        background-repeat: no-repeat;
+        // 圖片取代文字
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;
+        // 置中
+        margin: 0 auto;
+      }
+      :hover{
+        animation: .3s logo_scale infinite alternate;
+      }
+    }
+  }
+  .main_menu{
+    background-color: $white;
+    >ul {
+      border-top: 1px solid $gray_twenty;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      // z-index讓圖片不要擋住選單
+      z-index: 2;
+      .logo{
+        width: 100px;
+        height: auto;
+        position: absolute;
+        left: 50px;
+        top: 5px;
+        display: none;
+        :hover{
+          animation: .3s logo_scale infinite alternate;
+        }
+      }
+      
+      >li {
+        position: relative;
+        padding: 10px;
+        transition: .2s ease;    
+        >a {
+          color: $text_black;
+          position: relative;
+          .fa-angle-down{
+            margin-left: 3px;
+          }
+          .fa-plus{
+            display: none;
+          }
+        }
+        >a:after {
+          position: absolute;
+          content: "";
+          display: block;
+          border-bottom: 2px solid $logo_red;
+          left: 50%;
+          right: 50%;
+          transition: 0.3s ease;
+        }
+        >a:hover{
+          color: $logo_red;
+        }
+        >a:hover:after {
+          left: 0;
+          right: 0;
+        }
+        
+        // 下拉選單
+        div.menu_dropdown{
+          position: absolute;
+          width: 200px;
+          top: 48px;
+          left: 0;
+          background-color: $white;
+          z-index: 2;
+          display: none;
+          transition: 1s ease;
+          ul{
+            li{
+              transition: .2s ease;
+              border-bottom: 1px solid $gray_twenty;
+              a{
+                color: $text_black;
+                display: block;
+                width: 100%;
+                padding: 10px;
+                :hover{
+                  color: $white;
+                }
+              }
+              a:hover{
+                color: $white;
+              }
+            }
+            li:hover{
+              background-color: $logo_red;
+            }
+            li:hover{
+              a{
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+      li.search{
+        display: flex;
+        justify-content: center;
+        input {
+          border: 2px solid $logo_red;
+          height: 20px;
+          outline: none;
+          padding: 3px;
+          width: 150px;
+          height: 21px;
+        }
+        .icon{
+          i{
+            display: inline-block;
+            padding: 7.5px;
+            color: $text_black;
+            cursor: pointer;
+            background-color: $logo_red;
+            color: $white;
+            // border: 1px solid black;
+          }
+        }
+        
+      }
+      >li:hover{
+        // transform: translateY(3px);
+      }
+      // 第一層li被hover後開啟第二層選單
+      >li:hover div.menu_dropdown{
+        display: block;
+      }
+    }
+    
+  }
+}
+
+
+
+
+@media ( max-width: 768px){
+  .header{
+    img{
+      display: none;
+    }
+    .topbar{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 2;
+      box-shadow: 1px 1px 5px rgba(234, 91, 80, 0.8);
+        .hamburger{
+          display: block;
+        }
+        ul{
+          width: 30%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          top: 10px;
+          // border: 1px solid;
+          li{
+            width: 35%;
+            padding: 0px 5px;
+            // border: 1px solid;
+          }
+          
+        }
+      }  
+    .main_menu{
+      >ul{
+        position: fixed;
+        top: 83px;
+        width: 100%;
+        height: auto;
+        z-index: 4;
+        display:none;
+        text-align: center;
+        // flex: none;
+        
+        background-color: $white;
+        >li{
+          border-bottom: 1px solid $gray_twenty;
+          a{
+            color: $text_black;
+            display: block;
+            .fa-angle-down{
+              display: none;
+            }
+            .fa-plus{
+              display: inline-block;
+              position: absolute;
+              top: 6px;
+              right: 10px;
+            }
+          }
+          a:after{
+            display: none;
+            
+          }
+          div.menu_dropdown{
+            width: 100%;
+            background-color: red;
+            background-color: $auxiliary_pink;
+            color: $white;
+            ul{
+              li{
+                a{
+                  color: $white;
+                  padding: 10px 0px;
+                }
+              }
+            }
+          }
+        }
+        >li.search{
+
+          input{
+            // margin-left: 38%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media ( max-width: 414px){
+  .header{
+    .topbar{
+      .hamburger{
+        transform:scale(0.5);
+        top: -5px;
+        left: -10px;
+      }
+      ul{
+        li{
+          padding: 0;
+          width: 25%;
+          a{
+            span{
+              display: none;
+            }
+            i{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .logo{
+        padding: 8px;
+        a{
+          width: 76px;
+          height: 32px;
+        }
+      }
+    }
+    .main_menu{
+      >ul{
+        top: 48px;
+        >li.search{
+          .icon{
+            i{
+              // 調整放大鏡位置
+              margin-left: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

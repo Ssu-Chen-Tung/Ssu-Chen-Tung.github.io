@@ -1,0 +1,50 @@
+// 頁數
+ul.page{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li{
+        margin-left: 2px;
+        margin-right: 2px; 
+        background-color: $white;
+        
+        :hover{
+            background-color: $logo_orange;
+            border-color: $logo_orange;
+            color: $white;
+        } 
+        a{
+            width: 30px;
+            height: 30px;
+            display: block;
+            border: 1px solid $gray_twenty;
+            border-radius: 100%;
+            line-height: 1.9; 
+            transition: .2s;
+        }
+    }
+}
+
+@media( max-width: 768px){
+    ul.page{
+        margin-top: 10px;
+    }
+}
+
+
+@media( max-width: 414px){
+    ul.page{
+        margin-top: 0px;
+        margin-bottom: 30px;
+        li{
+            a{
+                width: 25px;
+                height: 25px;
+                line-height: 1.6; 
+            }
+        }
+    }
+}

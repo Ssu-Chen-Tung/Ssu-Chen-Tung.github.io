@@ -1,0 +1,38 @@
+.aside{
+    width: 15%;
+    >h4{
+        font-weight: bold;
+        padding: 10px;
+        a{
+            border-bottom: 2px solid $text_black;
+            padding-bottom: 5px;
+        }
+    }
+    ul{
+
+        li{
+            padding: 10px;
+            i{
+                animation: star_rotate 3s linear infinite;
+            }
+            :hover{
+                color: $logo_red;
+            }
+        }
+        h4{
+            padding: 10px;
+        }
+        .theme{
+            li{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+@media( max-width: 414px){
+    .aside{
+        display:none;
+    }
+}

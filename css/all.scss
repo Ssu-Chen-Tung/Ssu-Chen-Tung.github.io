@@ -1,0 +1,74 @@
+// 80%黑
+$text_black: #595757;
+// logo橘
+$logo_orange: #f39618;
+// logo紅
+$logo_red: #ea5b50;
+// 粉
+$pink: #f29fac;
+// 輔色粉
+$auxiliary_pink: #ee7f8f;
+// 白色
+$white: #fff;
+// 20%灰
+$gray_twenty: #dcdddd;
+// 60%黑
+$gray_sixty: #898989;
+
+
+// 動畫設定
+// 放大縮小效果
+@keyframes logo_scale {
+    0%{ transform: scale(1);}
+    100%{ transform: scale(1.05);} 
+}
+
+
+
+
+// 以下為有多頁共用的css部分
+@import "reset";
+
+// 包住全部除了footer的容器
+@import "wrap";
+
+@import "header";
+@import "navFixed";
+@import "footer";
+
+// 包住商品陳列畫面的容器
+@import "main";
+// 單一商品頁面及商品陳列畫面都有的麵包屑
+@import "breadcrumbs";
+// 商品頁面都有的左側邊欄
+@import "aside";
+// 右邊的商品陳列畫面
+@import "product";
+// 頁數
+@import "page";
+// 單一產品頁面的介面，不同商品只需換img、文字內容和麵包屑
+@import "single_product";
+// 固定的右側fb cart top
+@import "fixed";
+
+
+
+@import 'clip_earrings';
+
+
+
+
+
+
+
+
+// 以下為每頁自己單獨有的css內容
+@import "index";
+@import "all_product";
+@import "about_us";
+@import "shop";
+@import "outfit";
+@import "maintenance";
+@import "theme";
+@import 'newProduct';
+@import 'theme_pearl';

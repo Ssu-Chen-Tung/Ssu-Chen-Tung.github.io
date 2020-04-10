@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>FOCUS飾品</title>
+    <!-- logo小圖示 -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- google_font 思源黑體 -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google_font Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <!-- 漢堡 -->
+    <link rel="stylesheet" href="hamburgers-master/hamburgers-master/dist/hamburgers.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+    <!-- swiper輪播 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+    <!-- 輪播的css設定 -->
+    <style>
+      .swiper-container {
+        max-width: 100%;
+        height: auto;
+        z-index: 1;
+      }
+      .swiper-slide {
+        text-align: center;
+
+      }
+      .swiper-slide img {
+        width: 100%;
+      }
+      /* 改變輪播圖片-桌機版不要顯示手機版圖片 */
+      .phone{
+        display: none;
+      }
+      @media( max-width: 414px){
+        .computer{
+          display: none;
+        }
+        /* 顯示手機版圖片 */
+        .phone{
+          display: block;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <img src="images/header_decoration-01.svg" alt="">
+        <div class="topbar">
+          <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <ul>
+            <li>
+              <a href="login.html"
+                ><i class="fas fa-sign-in-alt"></i><span>登入/註冊</span></a
+              >
+            </li>
+            <li>
+              <a href="my_account.html"><i class="fas fa-user"></i><span>我的帳號</span></a>
+            </li>
+            <li>
+              <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>購物車</span></a>
+            </li>
+            <li>
+              <a href="contact_us.html"
+                ><i class="fas fa-envelope"></i><span>聯絡我們</span></a
+              >
+            </li>
+          </ul>
+          <h1 class="logo"><a href="index.html">FOCUS</a></h1>
+        </div>
+        <div class="main_menu">
+          <ul>
+            <div class="logo">
+              <a href=""> <img src="images/logo_small.svg" alt=""></a>    
+            </div>
+            <li>
+              <a href="all_product.html"
+                >所有商品<i class="fas fa-angle-down"></i
+              ><i class="fas fa-plus"></i></a>
+              <div class="menu_dropdown">
+                <ul>
+                  <li><a href="new_product.html">新品上市</a></li>
+                  <li><a href="">折扣出清</a></li>
+                  <li><a href="">夾式耳環</a></li>
+                  <li><a href="">針式耳環</a></li>
+                  <li><a href="">項鍊</a></li>
+                  <li><a href="">戒指</a></li>
+                  <li><a href="">手飾</a></li>
+                  <li><a href="">髮飾</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="theme.html">主題系列<i class="fas fa-angle-down"></i
+              ><i class="fas fa-plus"></i></a>
+              <div class="menu_dropdown">
+                <ul>
+                  <li><a href="theme_pearl.html">珍珠</a></li>
+                  <li><a href="">花朵</a></li>
+                  <li><a href="">愛心</a></li>
+                  <li><a href="">幾何</a></li>
+                  <li><a href="">木質</a></li>
+                  <li><a href="">復古</a></li>
+                  <li><a href="">水鑽</a></li>
+                  <li><a href="">編織</a></li>
+                  <li><a href="">玳瑁</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="outfit.html">穿搭分享</a></li>
+            <li><a href="shop.html">門市資訊</a></li>
+            <li><a href="maintenance.html">飾品保養說明</a></li>
+            <li><a href="about_us.html">關於我們</a></li>
+            <li class="search">
+              <input type="text" placeholder="找商品" />
+              <div class="icon"><i class="fas fa-search"></i></div>
+            </li >
+          </ul>
+        </div>
+      </div>
+      <div class="index_content">
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- Required swiper-lazy class and image source specified in data-src attribute -->
+              <img data-src="images/index_banner_01.gif" class="swiper-lazy" />
+              <!-- Preloader image -->
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                data-src="images/index_banner_02.jpg"
+                class="swiper-lazy computer"
+              />
+              <img data-src="images/index_banner_02_phone.jpg" class="swiper-lazy phone" />
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                data-src="images/index_banner_03.gif"
+                class="swiper-lazy computer"
+              />
+              <img data-src="images/index_banner_03_phone.jpg" class="swiper-lazy phone" />
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                data-src="images/index_banner_04.jpg"
+                class="swiper-lazy computer"
+              />
+              <img data-src="images/index_banner_04_phone.jpg" class="swiper-lazy phone" />
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+            <!-- <div class="swiper-slide">
+              <img
+                data-src="https://picsum.photos/900/600"
+                class="swiper-lazy"
+              />
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                data-src="https://picsum.photos/900/600"
+                class="swiper-lazy"
+              />
+              <div
+                class="swiper-lazy-preloader swiper-lazy-preloader-white"
+              ></div>
+            </div> -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination swiper-pagination-white"></div>
+          <!-- Navigation -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+        <h2>FOCUS推薦商品</h2>
+        <div class="magazine_pic">
+          <!-- <a href="single_product_pinkStar.html"><div class="pic1 wow fadeInUp" data-wow-duration="2s"></div></a>
+          <a href="single_product_pinkStar.html"><div class="pic2 wow fadeInUp" data-wow-duration="2s"></div></a>
+          <a href="single_product_pinkStar.html"><div class="pic3 wow fadeInUp" data-wow-duration="2s"></div></a> -->
+          <a href="single_product_pinkStar.html">
+            <img src="images/index_magazine_1.jpg" alt="" class="wow fadeInUp computer" data-wow-duration="2s">
+            <img src="images/index_magazine_1_phone.jpg" alt="" class="wow fadeInUp phone" data-wow-duration="2s">
+          </a>
+          <a href="single_product_pinkStar.html">
+            <img src="images/index_magazine_2.jpg" alt="" class="wow fadeInUp computer" data-wow-duration="2s">
+            <img src="images/index_magazine_2_phone.jpg" alt="" class="wow fadeInUp phone" data-wow-duration="2s">
+          </a>
+          <a href="single_product_pinkStar.html">
+            <img src="images/index_magazine_3.jpg" alt="" class="wow fadeInUp computer" data-wow-duration="2s">
+            <img src="images/index_magazine_3_phone.jpg" alt="" class="wow fadeInUp phone" data-wow-duration="2s">
+          </a>
+        </div>
+        <h2>夾式/針式耳環</h2>
+        <div class="earrings">
+          <a href="theme_pearl.html"  class="wow zoomIn" data-wow-duration="2s"
+            ><img src="images/index_clips.jpg" alt="" 
+          /></a>
+          <a href="theme_pearl.html" class="wow zoomIn" data-wow-duration="2s"><img src="images/index_pins.jpg" alt=""/></a>
+          <div class="bg"></div>
+        </div>
+        <h2>主題系列精選</h2>
+        <div class="theme">
+          <div class="item">
+            <div class="pic fadeInUp wow" data-wow-duration="2s">
+              <a href="theme_pearl.html"><img src="images/pearl.jpg" alt=""/></a>
+            </div>
+
+            <a href="theme_pearl.html" class="txt fadeInUp wow" >
+              <h3>珍珠系列</h3>
+              <p>
+                珍珠晶瑩凝重，圓潤多彩，高雅純潔，被譽為寶石皇后，國際寶石界還將珍珠列為六月生辰的幸運石，結婚十三週年和三十週年的紀念石具有瑰麗色彩和高雅氣質的珍珠，象徵著健康純潔富有和幸福，自古以來為人們所喜愛。
+              </p>
+            </a>
+          </div>
+          <div class="item">
+            <a href="theme_pearl.html" class="txt fadeInUp wow" >
+              <h3>花朵系列</h3>
+              <p>
+                自古以來花常被用來形容女性的容貌及姿態，也象徵美麗及青春歲月，每個季節都有不同花朵，每個女孩可以依據自己的喜好，也可以依據季節來挑選適合您的花飾品。
+              </p>
+            </a>
+            <div class="pic fadeInUp wow" data-wow-duration="2s">
+              <a href="theme_pearl.html"><img src="images/flower.jpg" alt=""/></a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic fadeInUp wow" data-wow-duration="2s">
+              <a href="theme_pearl.html"
+                ><img src="images/geometric.jpg" alt=""
+              /></a>
+            </div>
+            <a href="" class="txt fadeInUp wow">
+              <h3>幾何系列</h3>
+              <p>
+                簡約的幾何造型非常容易搭配服裝，為現代化的時尚潮流，如果不想太花時間在搭配上的話，一定要入手！
+              </p>
+            </a>
+          </div>
+        </div>
+        <h2>熱銷新品</h2>
+        <div class="newProduct">
+          <ul class="product">
+            <li class="fadeInUp wow">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_01.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>愛不止息雙色愛心串垂墜耳環</h4>
+                  <p>$450</p>
+                  <div class="cart"></div>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li>
+            <li class="fadeInUp wow" data-wow-delay=".3s">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_02.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>輪迴黑白旋轉垂墜耳環</h4>
+                  <p>$300</p>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li>
+            <li class="fadeInUp wow" data-wow-delay=".6s">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_03.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>圖騰菱形鏤空耳環</h4>
+                  <p>$350</p>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li>
+            <li class="fadeInUp wow" data-wow-delay=".9s">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_04.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>粼彩聚光簡約水鑽耳環</h4>
+                  <p>$600</p>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li>
+            <li class="fadeInUp wow">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_05.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>流星光年星球月光石耳環</h4>
+                  <p>$600</p>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li>
+            <li class="fadeInUp wow" data-wow-delay=".3s">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_06.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>釀造微醺時光小酒桶項錬</h4>
+                  <p>$600</p>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li>
+            <li class="fadeInUp wow" data-wow-delay=".6s">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_07.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>雪影記憶麋鹿鋯石耳環</h4>
+                  <p>$350</p>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li>
+            <li class="fadeInUp wow" data-wow-delay=".9s">
+              <a href="single_product_pinkStar.html">
+                <div class="pic">
+                  <img src="images/product_08.jpg" alt="" />
+                </div>
+                <div class="txt">
+                  <h4>愛心相扣式項鍊</h4>
+                  <p>$890</p>
+                </div>
+              </a>
+              <div class="add">
+                <i class="fas fa-shopping-cart"></i>
+                <span>加入購物車</span>
+              </div>
+            </li class="fadeInUp wow" data-wow-delay=".3s">
+          </ul>
+          <ul class="page wow zoomIn">
+            <li><a href="#"><</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">></a></li>
+          </ul>
+        </div>
+        <h2>追蹤我們的IG</h2>
+        <div class="ig">
+          <a href="">
+            <div class="pic pic1 fadeInUp wow">
+              <img src="" alt="">
+              <p>新品試戴活動直播</p>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </a>
+          <a href="">
+            <div class="pic pic2 fadeInUp wow" data-wow-delay=".3s">
+              <p>賀！實體店面裝修完工</p>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </a>
+          <a href="">
+            <div class="pic pic3 fadeInUp wow" data-wow-delay=".6s">
+              <p>可愛的白兔飾品</p>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </a>
+          <a href="">
+            <div class="pic pic4 fadeInUp wow" data-wow-delay=".9s">
+              <p>今天的新商品</p>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </a>
+          <a href="">
+            <div class="pic pic5 fadeInUp wow" data-wow-delay="1.2s"> 
+              <p>今日商品試戴直播20:00開始</p>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="fixed">
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+          </li>
+          <li>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+          <li class="top">
+            <a href="#"><i class="fas fa-chevron-circle-up"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class="icon">
+        <li>
+          <a href="#"><img src="images/ig-icon.png" alt="" width="80px"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/fb-icon.png" alt="" width="80px"/></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/line.png" alt="" width="80px"/></a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li>
+            <h4>客服專線</h4>
+            <i class="fas fa-phone-alt"></i>0800-253-826<br />時間：週一到週五<br />09:00-18:00
+        </li>
+        <li>
+          <h4>信義松仁門市</h4>
+          <i class="fas fa-phone-alt"></i>02-272-3397<br />平日：08:00 - 22:00<br>假日：10:00 - 22:00<br />
+        </li>
+        <li>
+          <h4>桃園中壢門市</h4>
+          <i class="fas fa-phone-alt"></i>03-427-1801<br />平日：10:00 - 22:00<br>假日：12:00 - 21:00<br />
+        </li>
+        <li>
+          <h4>新竹東區門市</h4>
+          <i class="fas fa-phone-alt"></i>02-272-3397<br />平日：08:00 - 22:00<br>假日：10:00 - 22:00<br />
+        </li>
+      </ul>
+      <div class="copyright">FOCUS©All Rights Reserved</div>
+    </div>
+
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- swiper輪播 -->
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>
+      // 輪播
+      var swiper = new Swiper(".swiper-container", {
+        // Enable lazy loading
+        lazy: true,
+        loop: true,
+        effect:"fade",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    </script>
+    <script>
+      new WOW().init();
+    </script>
+
+  <script>
+    var $hamburger = $(".hamburger");
+    $hamburger.on("click", function(e) {
+      $hamburger.toggleClass("is-active");
+      // Do something else, like open/close menu
+      // $(this).closest("div.header").find("div.main_menu").children("ul").slideToggle();
+      $(this).closest("div.header").find("div.main_menu").find("ul").slideToggle();
+    });
+  </script>
+  <script>
+    $('.fa-plus').on('click', function(e){
+      e.preventDefault();
+      $(this).parent("a").parent("li").find("ul").slideToggle();
+    })
+  </script>
+
+    <script src="js/all.js"></script>
+  </body>
+</html>

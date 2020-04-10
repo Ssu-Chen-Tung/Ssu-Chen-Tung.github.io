@@ -1,0 +1,186 @@
+.theme_content{
+    .breadcrumbs{
+        margin-top: 20px;
+        ul{
+            display:flex;
+            justify-content:center;
+        }
+    }
+    .banner{
+        max-width: 1280px;
+        height: 600px;
+        background-image: url('../images/theme_banner.jpg');
+        background-size: cover;
+        h2{
+            position: relative;
+            // display: inline-block;
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba($color: $logo_orange, $alpha: .9);
+            color: $white;
+            font-size: 30px;
+            left: 150px;
+            top: 50px;
+            writing-mode: vertical-lr;
+            
+        }
+        p{
+            position: relative;
+            width: 600px;
+            left: 350px;
+            top: 250px;
+            padding: 20px;
+            // background: rgba($color: $white, $alpha: .4)
+            border-radius: 10px;
+            background-image:url('../images/hip-square.png');
+            border: 1px solid $white;
+        }
+    }
+    .container{
+        >h2{
+            display: inline-block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 3px solid $logo_red;
+            color: $text_black;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .item{
+            // border: 1px solid;
+            display: flex;
+            .pic{
+                position: relative;
+                width: 65%;
+                height: 300px;
+                background-size: cover;
+                a{
+                    position: absolute;
+                    display: block;
+                    padding: 5px 10px;
+                    color: $white;
+                    // background-color: $auxiliary_pink;
+                    bottom: 20px;
+                    right: 20px;
+                    border: 2px solid $white;
+                    transition: all .3s;
+                }
+                a:hover{
+                    background-color: $auxiliary_pink;
+                    cursor: pointer;   
+                }
+            }
+            .pic1{
+                background-image: url('../images/theme_pearl.jpg');
+            }
+            .pic2{
+                background-image: url('../images/theme_flowers.jpg');
+            }
+            .pic3{
+                background-image: url('../images/theme_love.jpg');
+            }
+            .pic4{
+                background-image: url('../images/theme_geometric.jpg');
+            }
+            .pic5{
+                background-image: url('../images/theme_wood.jpg');
+            }
+            .pic6{
+                background-image: url('../images/theme_old.jpg');
+            }
+            .pic7{
+                background-image: url('../images/theme_rhinestone.jpg');
+            }
+            .pic8{
+                background-image: url('../images/theme_weave.jpg');
+            }
+            .pic9{
+                background-image: url('../images/theme_retro.jpg');
+            }
+            .txt{
+                // position: relative;
+                // top: 100px;
+                // left: -50px;
+                width: 35%;
+                background-image: url('../images/dust_scratches.png');
+                padding: 20px;
+                // border: 5px solid $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h4{
+                    text-align: center;
+                }
+            }
+        }
+        .item9{
+            margin-bottom: 100px;
+        }
+    }
+}
+
+
+@media( max-width: 1280px){
+    .theme_content{
+        .banner{
+           height: auto; 
+        }  
+    } 
+}
+
+@media(max-width: 768px){
+    .theme_content{
+        .banner{       
+                margin: 0;
+                // border: solid 1px red;
+                h2{
+                    left: 0;
+                    top: 0;
+                }
+                p{
+                    width: 300px;
+                    left: 300px;
+                    top: -20px;
+                }
+        
+        } 
+    }
+}
+
+@media(max-width: 414px){
+    .theme_content{
+
+        .banner{
+            h2{
+                font-size: 24px;
+            }
+            p{
+                width: 300px;
+                top: 0;
+                left: 0;
+                bottom: 30px;
+                opacity: .9;
+                margin-top: 100px;
+            }
+        }
+        .container{
+            .item{
+                flex-direction: column;
+                .pic{
+                    width: 100%;
+                }
+                .txt{
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+            .item.reverse{
+                // 讓排版統一改回圖片在上方
+                flex-direction: column-reverse;
+            }
+            .item9{
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

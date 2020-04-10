@@ -1,0 +1,42 @@
+.cart_content {
+  table {
+    width: 90%;
+    text-align: center;
+    border: 1px solid $gray_twenty;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    tr {
+      th {
+        border-bottom: 1px solid $gray_twenty;
+        background-color: $text_black;
+        color: $white;
+        padding: 10px;
+        font-weight: bold;
+      }
+      td {
+        vertical-align: middle;
+        border-bottom: 1px solid $gray_twenty;
+        padding: 10px;
+        input {
+          text-align: center;
+          border: 1px solid $text_black;
+          border-radius: 5px;
+        }
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+    tr.end {
+      background-color: $text_black;
+      color: $white;
+      td.buy {
+        background-color: $logo_red;
+        cursor: pointer;
+      }
+    }
+  }
+}

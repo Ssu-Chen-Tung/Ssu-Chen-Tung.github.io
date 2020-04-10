@@ -1,0 +1,104 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	// 行高
+	line-height: 1.8;
+	// 字體設定
+	font-family: 'Noto Sans TC','Roboto';
+	font-weight: 500;
+	background-image: url('../images/bg_decoration3-01.png');
+	// overflow-x:hidden;
+}
+ol, ul,li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: $text_black;
+}
+
+// 自訂a
+a{
+	text-decoration: none;
+	color: $text_black;
+}
+h2{
+	font-size: 24px;
+	color: $text_black;
+}
+h3{
+	font-size: 21px;
+	color: $text_black;
+}
+// 小標題  和選單同大小
+h4{
+	color: $text_black;
+	font-size: 18px;
+}
+// 自訂p 內文
+p{
+	font-size: 15px;
+	color: $text_black;
+}
+
+form{
+	color: $text_black;
+}
+
+
+@media ( max-width : 768px){
+	body{
+		// 為了讓內容不被固定在上方的選單擋住，所以透過body的padding-top把內容往下推移
+		padding-top: 84px;
+	}
+	
+}
+@media( max-width : 414px){
+	body{
+		padding-top: 49px;
+		h2{
+			font-size: 21px;
+		}
+		h3{
+			font-size: 18px;
+		}
+		h4{
+			font-size: 15px;
+		}
+		p{
+			font-size: 13px;
+		}
+	}
+}

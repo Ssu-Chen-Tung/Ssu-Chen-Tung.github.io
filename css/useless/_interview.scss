@@ -1,0 +1,30 @@
+.interview_content{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        li{
+            width: 45%;
+            margin: 0 auto;
+            margin-top: 30px;
+            a{
+                .pic{
+                    img{
+                        width: 100%;
+                    }
+                }
+                .txt{
+                    h4{
+                        text-align: center;
+                        margin-top: 10px;
+                        font-weight: bold;
+                    }
+                    p{
+                        text-align: center;    
+                    }
+                }
+           
+            }
+        }
+    }
+}

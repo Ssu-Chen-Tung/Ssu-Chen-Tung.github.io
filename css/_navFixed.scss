@@ -1,0 +1,25 @@
+.header {
+  .navFixed {
+    background-color: $white;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    min-width: 100%;
+    opacity: 0.95;
+    box-shadow: 1px 1px 5px rgba(234, 91, 80, 0.8);
+    ul {
+      border: none;
+      .logo{
+        display:block;
+      }
+      li {
+        a {
+          color: $text_black;
+        }
+      }
+    }
+  }
+}
+

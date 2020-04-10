@@ -1,0 +1,14 @@
+.theme_pearl_content{
+    display: flex;
+    flex-wrap: wrap;
+    .aside{
+        margin-top: 50px;
+    }
+    .main{
+        .banner{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

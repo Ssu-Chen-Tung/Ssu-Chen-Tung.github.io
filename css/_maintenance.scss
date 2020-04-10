@@ -1,0 +1,189 @@
+.maintenance_body{
+    background-image: url('../images/dust_scratches.png');
+}
+
+.maintenance_content{
+    .breadcrumbs{
+        margin-top: 20px;
+        ul{
+            display:flex;
+            justify-content:center;
+        }
+    }
+    margin-bottom: 100px;
+    // background-image: url('../images/dust_scratches.png');
+    .banner{
+        max-width: 1280px;
+        height: 600px;
+        background-image: url('../images/maintenance.jpg');
+        background-size: cover;
+        h2{
+            position: relative;
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba($color: $logo_orange, $alpha: .9);
+            color: $white;
+            font-size: 30px;
+            left: 150px;
+            writing-mode: vertical-lr;
+            
+        }
+        p{
+            position: relative;
+            width: 300px;
+            left: 40px;
+            top: 50px;
+            padding: 20px;
+            // background: rgba($color: $white, $alpha: .4)
+            border-radius: 10px;
+            background-image:url('../images/hip-square.png')
+        }
+    
+    }
+    .container{
+        margin-bottom: 100px;
+        position: relative;
+        .btn_area{
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .btn{
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: $white;
+            box-shadow: 2px 2px 0px $auxiliary_pink;
+            border: 1px solid $auxiliary_pink;
+            // border-radius: 50px;
+            color: $text_black;
+            transition: .3s;
+        }
+        .btn:hover{
+            background-color: $logo_red;
+            color: $white;
+            cursor: pointer;
+            box-shadow: none;
+        }
+        h2{
+            display: inline-block;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 3px solid $logo_red;
+            color: $text_black;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .QA{
+            margin: 0 auto;
+            margin-bottom: 30px;
+            width: 70%;
+            border-radius: 10px;
+            .Q,.A{
+                padding: 10px;
+            }
+            .Q{
+                background-color: white;
+                cursor: pointer;
+                transition:.3s;
+                border: 1px solid $text_black;
+                h4{
+                    position: relative;
+                    .fa-angle-down{
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                    }
+                }
+            }
+            .Q:hover{
+                background-color: $auxiliary_pink;
+                border: 1px solid $auxiliary_pink;
+                h4{
+                    color: $white;
+                }
+                
+            }
+            .focus{
+                background-color: $auxiliary_pink;
+                border: 1px solid $auxiliary_pink;
+                h4{
+                    color: $white;
+                }
+            }
+            .A{
+                display: none;
+                background-color: $white;
+                // border: 1px solid $text_black;
+                margin-top: 10px;
+                padding: 30px;
+                border-radius: 10px;
+            }
+        }     
+    }
+}
+
+
+@media(max-width: 1280px){
+    .maintenance_content{
+        .banner{
+            height: auto;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .maintenance_content{
+        .banner{
+            h2{
+                left: 0;
+            }
+            p{
+                left: 0;
+                top: 0;
+                margin-top: 50px;
+            }
+        }
+        .container{
+            .btn_area{
+                display: flex;         
+                top: 30px;    
+            }
+        }
+    }
+}
+
+@media(max-width: 414px){
+    .maintenance_content{
+        .banner{
+            background-position: -300px 0;
+            h2{
+                font-size: 24px;
+            }
+            p{
+                opacity: .9;
+            }
+        }
+        .container{
+            >h2{
+                font-size: 21px;
+            }
+            .btn_area{
+                right: 0;
+                top: 5px;
+                .btn{
+                    padding: 5px;
+                    margin: 5px;
+                }
+            }
+            h2.gold{
+                margin-top: 80px;
+            }
+            .QA{
+                width: 95%;
+            }
+        }
+    }
+}

@@ -1,0 +1,231 @@
+// 首頁內容
+.index_content{
+    //大標題 置中
+    h2{
+        margin-top: 100px;
+        margin-bottom: 20px;
+        display: inline-block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 3px solid $logo_red;
+    }
+    // 雜誌排版風格-Model
+    .magazine_pic{
+        width: 78%;
+        margin: 0 auto;
+        a{
+            img{
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    // 耳環
+    .earrings{
+        width: 78%;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        a{
+            img{
+                width: 100%;
+            }
+        }
+        .bg{
+            position: absolute;
+            width: 120%;
+            height: 700px;
+            left: -10%;
+            top: -10%;
+            background-image: url('../images/index_bg_img_01');
+            background-size: contain;
+            z-index: -1;
+            background-repeat: no-repeat;
+        }
+    }
+    // 主題系列
+    .theme{
+       .item{
+           margin-bottom: 50px;
+           >:first-child{
+               margin-right: -10%;
+           }
+           display: flex;
+           align-items: center;
+           .pic{
+              width: 55%; 
+              height: 500px;
+              overflow: hidden;
+              flex-shrink: 0;
+              img{
+                  width: 100%;
+                  vertical-align: middle;
+              }
+           }
+           .txt{
+               border-radius: 10px;
+               width: 55%;
+               flex-shrink: 0;
+               z-index: 1;
+               background-color: rgba(238,127,143,.8);
+               padding: 20px;
+               box-sizing: border-box;
+               color: white;
+               transition: 1s ease;
+               h3{
+                   text-align: center;
+                   margin-bottom: 10px;
+                   border-bottom: 1px solid $white;
+                   margin-top: 0;
+                   color: $white;
+                   a{
+                       color: $white;
+                   }
+               }
+               p{
+                   color: $white;
+               }
+           }
+           .txt:hover{
+                background-color: rgba(238,127,143,1);       
+           }
+       }
+    }
+    .newProduct{
+        ul.product{
+            li{
+                width: 23%;
+            }
+        } 
+    }
+    .ig{
+        display: flex;
+        margin-bottom: 100px;
+        a{    
+            width: 18%;
+            margin-left: 1%;
+            margin-right: 1%;
+            .pic{
+                position: relative;
+                background-size: cover;
+                overflow: hidden;
+                // 下面是為了讓縮放時就算使用background-image也可以有img的縮放效果
+                width: 100%;
+                height: 0;
+                padding-top: 100%; 
+                p{
+                    position: absolute;
+                    text-align: center;
+                    width: 100%;
+                    bottom: -27px;
+                    background-color: rgba($color: $logo_orange, $alpha: .85);
+                    color: white;
+                    transition: all .5s;
+                }
+                i{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    color: $white;
+                    font-size: 20px;
+                }
+            }
+            .pic:hover{
+                p{
+                    bottom: 0px;
+                }
+            }
+            .pic1{
+                background-image: url('../images/ig_01.jpg');
+            }
+            .pic2{
+                background-image: url('../images/ig_02.jpg');
+            }
+            .pic3{
+                background-image: url('../images/ig_03.jpg');
+            }
+            .pic4{
+                background-image: url('../images/ig_04.jpg');
+            }
+            .pic5{
+                background-image: url('../images/ig_05.jpg');
+            }
+        }   
+    }
+}
+
+
+
+
+
+
+
+@media(max-width: 1280px){
+    .swiper-container{
+        height: auto;
+    }
+  
+}
+    
+@media ( max-width: 768px){
+    .index_content{
+        .earrings{
+            .bg{
+                // width: 150%;
+            }
+        }
+        .theme{
+            .item{
+                margin-bottom: -100px;
+            }
+            
+        }
+        .newProduct{
+            ul.product{
+                li{
+                    width: 48%;
+                }
+            } 
+        }
+        .ig{
+            flex-wrap: wrap;
+            a{
+                width: 46%;
+                margin-left: 2%;
+                margin-right: 2%;
+                margin-bottom: 20px;
+            }
+            :nth-child(5){
+                display: none;
+            }
+        }
+    }
+}
+
+@media ( max-width: 414px){
+    .index_content{
+        h2{
+            margin-top: 20px;
+            
+        }
+  
+        .theme{
+            .item{
+                >:first-child{
+                    margin-right: -60%;
+                }
+                .pic{
+                    width: 80%;
+                }
+                a.txt{
+                    width: 80%;
+                    margin-top: 80px;
+                    
+                }
+            }
+        }
+        .ig{
+            margin-bottom: 30px;
+        }
+    }
+}
